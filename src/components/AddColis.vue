@@ -22,13 +22,8 @@ export default {
         }
     },
     created: function() {
-        navigator.geolocation.getCurrentPosition((position) => {
-            this.$store.dispatch('postCurrentPositions', {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude,
-                userId: this.getIdentifyUser.userId
-            })
-        })
+        // setInterval(this.getPostitions, 10000)
+        this.getPostitions();
     },
     computed: {
         ...mapGetters(["getIdentifyUser"])
@@ -51,6 +46,16 @@ export default {
         },
         resetError() {
             this.error = ""
+        },
+        getPostitions() {
+            navigator.geolocation.getCurrentPosition((position) => {
+                console.log(position.coords);
+                this.$store.dispatch('postCurrentPositions', {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude,
+                    userId: this.getIdentifyUser.userId
+                })
+            })
         }
     }
 }

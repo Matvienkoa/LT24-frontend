@@ -10,7 +10,7 @@
                 </span>
                 <span v-if="modeConfirm === 'yes' && selectedNumber === colis.number" class="colis-confirm-delete">
                     <span class="question">Supprimer le Colis?</span>
-                    <span @click.prevent="deleteColis(colis)" class="yes">Oui</span>
+                    <span @click.prevent="deleteColis(colis), switchToNoModeConfirm()" class="yes">Oui</span>
                     <span @click="switchToNoModeConfirm()" class="no">Non</span>
                 </span>
                 <span class="colis-edit">
