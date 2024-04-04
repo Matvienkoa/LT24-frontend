@@ -1,24 +1,11 @@
-# geoloc
+# Mail tracking web application
 
-## Project setup
-```
-npm install
-```
+![enter image description here](https://github.com/Matvienkoa/LT24-frontend/blob/master/src/assets/logo.png?raw=true)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+ Follow your delivery person on his tour and check where your package is !
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Technologies Frontend
 
-### Lints and fixes files
-```
-npm run lint
-```
+Vue.js
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Vue-google-map
